@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ping Pong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+
+</head>
+
+<body>
+    <center>
+        <h1 class="btn-warning heading">AI PING PONG GAME
+            <button style="float: right;" class="btn btn-default btn-md" data-toggle="modal"
+                data-target="#my_modal">Instructions</button>
+            <!-- here it is creating the popup -->
+        </h1>
+        <button class="btn btn-success btn-lg" style="margin-top: 25px;" onclick="startGame()">Play Game</button>
+        <br>
+        <button class="btn btn-danger btn-lg " style="margin-top: 25px;" onclick="restart()"><img src="restart.png"
+                style="width: 22px;" onclick="restart()"> Restart</button>
+        <br>
+        <h3 id="game_status" class="btn btn-default" style="margin-bottom: 15px;"></h3>
+        <div id="canvas"></div>
+        <div id="my_modal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="font-size: 25px;">Instructions</h4>
+                        <button class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h3>1. First keep your laptop screen straight.</h3>
+
+                        <h3>2. Move yourself approximately 3-4 feet away from the laptop. </h3>
+
+                        <h3> 3. Move your right wrist in an ascending and decending manner, a red dot should appear on
+                            your right wrist.</h3>
+
+                        <h3> 4. Now press the play button, and again move yourself 3-4 feet away from laptop.</h3>
+
+                        <h3> 5. The red paddel is your paddel, that will move as per the movement of your right wrist.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_footer">
+            Developed by- Manas Verma
+            <!--and if not then why mam and why are we giving bottom:0 in css instead of margin-bottom:0px ??? and what is the use of "sticky" in position parameter and mam the difference b/w "stick" & "position:fixed" ??-->
+           <!-- what is the use of display: flex in css? and parent() -->
+        </div>
+
+    </center>
+    <script src="main.js"></script>
+</body>
+
+</html>
